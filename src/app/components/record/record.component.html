@@ -1,0 +1,15 @@
+<div *ngIf="this.records.length > 0">
+    <h1 class="record__name"> {{this.name}} </h1>
+    <div class="record__entry" *ngFor="let record of records">
+        <div class="entry__title_wrapper">
+            <div class="entry__title"> {{record.getTitle()}} </div>
+            <div class="entry__start_end"> {{record.getStartToEnd()}} </div>
+        </div>
+        <div class="entry__company_wrapper">
+            {{record.getCompany() + ', ' + record.getCity()}}
+        </div>
+        <div class="record__description">
+            {{record.getDescription()}}
+        </div>
+    </div>
+</div>
