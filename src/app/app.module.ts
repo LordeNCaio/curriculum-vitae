@@ -7,6 +7,7 @@ import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontaweso
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { InformationComponent } from './components/information/information.component';
 import { RecordComponent } from './components/record/record.component';
+import { SimpleRecordComponent } from './components/simple-record/simple-record.component';
 
 @NgModule({
     declarations: [
@@ -14,6 +15,7 @@ import { RecordComponent } from './components/record/record.component';
         HeaderComponent,
         InformationComponent,
         RecordComponent,
+        SimpleRecordComponent,
     ],
     imports: [
         BrowserModule,

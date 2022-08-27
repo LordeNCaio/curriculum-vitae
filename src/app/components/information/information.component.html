@@ -11,6 +11,19 @@
         </div>
     </div>
     <div class="details">
+        <div class="details__item">
+            <app-simple-record [name]="'Dados Pessoais'" [records]="user.getPersonal()"></app-simple-record>
+        </div>
+        <div class="details__item">
+            <app-simple-record [name]="'Competências'" [records]="user.getCompetences()"></app-simple-record>
 
+        </div>
+        <div class="details__item">
+            <app-simple-record [name]="'Idiomas'" [records]="user.getLanguages()"></app-simple-record>
+
+        </div>
+        <div class="details__item">
+            <app-simple-record [name]="'Interesses'" [records]="user.getInterests()"></app-simple-record>
+        </div>
     </div>
 </section>

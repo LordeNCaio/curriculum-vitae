@@ -1,5 +1,8 @@
 import { Month } from "src/app/shared/enums/month.enum";
+import { ProgressBar } from "src/app/shared/enums/progress-bar.enum";
+import { SmallRecordType } from "src/app/shared/enums/small-record-type.enum";
 import { ContactModel } from "src/app/shared/models/contact/contact.model";
+import { SmallRecordModel } from "src/app/shared/models/small-record/small-record.model";
 import { YearMonthModel } from "src/app/shared/models/year-month/year-month.model";
 import { CertificationsRecordModel } from "../records/certifications-record.model";
 import { ExperienceRecordModel } from "../records/experience-record.model";
@@ -93,6 +96,29 @@ export class UserModel {
             'Santo André',
             null,
             new YearMonthModel(2022, Month.JUNHO)),
+    ];
+
+    private personal: Array<SmallRecordModel> = [
+        new SmallRecordModel('Linkedin', 'linkedin.com/in/lordencaio', SmallRecordType.TEXT)
+    ]
+
+    private competences: Array<SmallRecordModel>  = [
+        new SmallRecordModel('Aprendizado Continuo', null, SmallRecordType.PROGRESS_BAR, ProgressBar.LEVEL3),
+        new SmallRecordModel('Autonomia', null, SmallRecordType.PROGRESS_BAR, ProgressBar.LEVEL4),
+        new SmallRecordModel('Criatividade', null, SmallRecordType.PROGRESS_BAR, ProgressBar.LEVEL4),
+        new SmallRecordModel('Resiliência', null, SmallRecordType.PROGRESS_BAR, ProgressBar.LEVEL3),                
+        new SmallRecordModel('Resolução de Problemas', null, SmallRecordType.PROGRESS_BAR, ProgressBar.LEVEL3),
+    ]
+
+    private languages: Array<SmallRecordModel> = [
+        new SmallRecordModel('Português', null, SmallRecordType.PROGRESS_BAR, ProgressBar.LEVEL5),
+        new SmallRecordModel('Inglês', null, SmallRecordType.PROGRESS_BAR, ProgressBar.LEVEL2),
+    ]
+
+    private interests: Array<SmallRecordModel> = [
+        new SmallRecordModel(null, 'Segurança da Informação', SmallRecordType.SQUARE_BAR),
+        new SmallRecordModel(null, 'Desenvolvimento de Sistemas', SmallRecordType.SQUARE_BAR),
+        new SmallRecordModel(null, 'Desenvolvimento de Jogos', SmallRecordType.SQUARE_BAR),
     ]
 
     public getContacts(): Array<ContactModel> {
@@ -109,5 +135,21 @@ export class UserModel {
 
     public getCertifications(): Array<CertificationsRecordModel> {
         return this.certifications;
+    }
+
+    public getPersonal(): Array<SmallRecordModel> {
+        return this.personal;
+    }
+
+    public getCompetences(): Array<SmallRecordModel> {
+        return this.competences;
+    }
+
+    public getLanguages(): Array<SmallRecordModel> {
+        return this.languages;
+    }
+
+    public getInterests(): Array<SmallRecordModel> {
+        return this.interests;
     }
 }
