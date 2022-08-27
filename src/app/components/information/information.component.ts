@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { GraduationRecordModel } from 'src/app/models/records/graduation-record.model';
+import { UserModel } from 'src/app/models/user/user.model';
 
 @Component({
   selector: 'app-information',
@@ -8,7 +8,7 @@ import { GraduationRecordModel } from 'src/app/models/records/graduation-record.
 })
 export class InformationComponent implements OnInit {
 
-  @Input() graduations : Array<GraduationRecordModel>;
+  @Input() user : UserModel;
 
   constructor() { }
 

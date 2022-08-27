@@ -1,0 +1,36 @@
+@import '../../../variables.scss';
+
+.record {
+    
+    .record__name {
+        color: $grey-900;
+        font-size: 16px;
+    }
+
+    .record__entry {
+        font-size: 12px;
+        margin-bottom: 16px;
+
+        .entry__title_wrapper {
+            display: flex;
+            flex-direction: row;
+            font-weight: bold;
+            justify-content: space-between;
+
+            .entry__title,
+            .entry__start_end {
+                color: $grey-800;
+                font-style: italic;
+            }
+        }
+
+        .entry__company_wrapper {
+            color: $grey-700;
+            font-style: italic;
+        }
+
+        .record__description {
+            
+        }
+    }
+}

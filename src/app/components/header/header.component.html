@@ -2,8 +2,9 @@
     <h1 class="header__name">{{this.fullName}}</h1>
     <h3 class="header__role">{{this.role}}</h3>
     <div class="header__contacts">
-        <div class="contacts__single">
-
+        <div class="contacts__single" *ngFor="let contact of contacts">
+            <fa-icon class="contact__icon" [icon]="contact.getName()"></fa-icon>
+            <span>{{contact.getContent()}}</span>
         </div>
     </div>
 </header>

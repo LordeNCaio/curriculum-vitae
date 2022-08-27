@@ -1,0 +1,31 @@
+@import '../../../variables.scss';
+
+.header {
+    background-color: $grey-900;
+    color: $grey-050;
+    padding: 16px;
+
+    .header__name {
+        font-size: 24px;
+    }
+
+    .header__role {
+        color: $grey-500;
+        font-size: 16px;
+        font-style: italic;
+    }
+
+    .header__contacts {
+        color: $grey-600;
+        display: flex;
+        font-size: 12px;
+
+        .contacts__single:not(:last-of-type) {
+            margin-right: 8px;
+        }
+
+        .contacts__single>.contact__icon {
+            margin-right: 4px;
+        }
+    }
+}

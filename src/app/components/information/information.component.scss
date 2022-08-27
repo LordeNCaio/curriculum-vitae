@@ -1,0 +1,22 @@
+@import '../../../variables.scss';
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+
+    .details:not(:last-of-type) {
+        border-right: 1px solid $grey-500;
+        margin: 16px 0;
+        padding: 0 16px;
+    }
+
+    .details {
+        
+        .details__item:not(:last-of-type) {
+            border-bottom: 1px solid $grey-500;
+            margin-bottom: 16px;
+            padding-bottom: 16px;
+        }
+
+    }
+}

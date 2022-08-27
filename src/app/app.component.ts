@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { GraduationRecordModel } from './models/records/graduation-record.model';
-import { Month } from './shared/enums/month.enum';
-import { YearMonthModel } from './shared/models/year-month/year-month.model';
+import { UserModel } from './models/user/user.model';
 
 @Component({
   selector: 'app-root',
@@ -11,9 +9,7 @@ import { YearMonthModel } from './shared/models/year-month/year-month.model';
 export class AppComponent implements OnInit {
   title = 'curriculum-vitae';
 
-  graduations: Array<GraduationRecordModel> = [
-    new GraduationRecordModel('Ensino Médio Completo', 'EE Professor Waldomiro Guimarães', 'Santo André', new YearMonthModel(2012, Month.JANEIRO), null)
-  ];
+  user: UserModel = new UserModel();
 
   ngOnInit(): void {
 
