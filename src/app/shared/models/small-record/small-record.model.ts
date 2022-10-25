@@ -1,4 +1,4 @@
-import { ProgressBar } from "../../enums/progress-bar.enum";
+import { getProgressBarName, ProgressBar } from "../../enums/progress-bar.enum";
 import { SmallRecordType } from "../../enums/small-record-type.enum";
 
 export class SmallRecordModel {
@@ -29,6 +29,9 @@ export class SmallRecordModel {
             }
             case SmallRecordType.PROGRESS_BAR: {
                 this.progress = progress;
+                if(!content) {
+                    this.content = getProgressBarName(progress);
+                }
                 break;
             }
         }

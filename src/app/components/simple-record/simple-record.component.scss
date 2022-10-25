@@ -26,8 +26,16 @@
         .progress_entry__wrapper {
             .progress_entry__content {
 
-                .progress__content {
+                .progress__label {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
                     margin-bottom: 4px;
+
+                    .progress__title {
+                        width: 50%;
+                    }
                 }
 
                 .progress_bar {

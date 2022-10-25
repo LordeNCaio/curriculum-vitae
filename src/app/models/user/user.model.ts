@@ -13,7 +13,7 @@ export class UserModel {
     private contacts: Array<ContactModel> = [
         new ContactModel('envelope', 'caiomacedo0102@gmail.com'),
         new ContactModel('phone', '(11) 94249-0491'),
-        new ContactModel('location-dot', 'Rua Neblina 63, Cata Preta, Santo André-SP, 09139-070')
+        new ContactModel('location-dot', 'Santo André, São Paulo')
     ];
 
     private graduations: Array<GraduationRecordModel> = [

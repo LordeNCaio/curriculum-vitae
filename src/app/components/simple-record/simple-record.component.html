@@ -8,7 +8,10 @@
 
         <div class="progress_entry__wrapper" *ngIf="isProgressBar(record)">
             <div class="progress_entry__content">
-                <div class="progress__content">{{record.getTitle()}}</div>
+                <div class="progress__label">
+                    <div class="progress__title">{{record.getTitle()}}</div>
+                    <div class="progress__content">{{record.getContent()}}</div>
+                </div>
                 <div class="progress_bar">
                     <div class="progress_bar_fill" [style.width.%]="record.getProgress()"></div>
                 </div>                 
